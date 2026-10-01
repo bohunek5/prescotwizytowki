@@ -3,15 +3,15 @@
     "id": "krzysztof-bara",
     "name": "Krzysztof Bara",
     "roles": {
-      "pl": "PREZES ZARZĄDU",
-      "en": "PRESIDENT OF THE BOARD"
+      "pl": "CEO",
+      "en": "CEO"
     }
   },
   {
     "id": "radoslaw-narwojsz",
     "name": "Radosław Narwojsz",
     "roles": {
-      "pl": "V-CE PREZES ZARZĄDU",
+      "pl": "CEO",
       "en": "CEO"
     }
   },

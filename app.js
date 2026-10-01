@@ -1,4 +1,5 @@
 'use strict';
+const cardVersion = '20261001-ceo';
 const colors = {krem:'Krem',granat:'Granat',biel:'Biel'};
 const colorClasses = {krem:'cream',granat:'navy',biel:'white'};
 const byId = id => document.getElementById(id);
@@ -13,10 +14,10 @@ function cardFigure(person,lang,color,side,zoom=false) {
   const sideName=side==='front'?'Przód':'Tył';
   const card=document.createElement('div'); card.className='card-object';
   card.style.background=color==='granat'?'#202c38':color==='biel'?'#fff':'#f3efe5';
-  card.style.setProperty('--mask',`url("assets/cards/${person.id}-${lang}-uv-${side}.svg")`);
+  card.style.setProperty('--mask',`url("assets/cards/${person.id}-${lang}-uv-${side}.svg?v=${cardVersion}")`);
   card.dataset.person=person.id;card.dataset.lang=lang;card.dataset.color=color;card.dataset.side=side;
   const img=document.createElement('img');
-  img.src=`assets/cards/${person.id}-${lang}-${color}-${side}.svg`;
+  img.src=`assets/cards/${person.id}-${lang}-${color}-${side}.svg?v=${cardVersion}`;
   img.alt=`${person.name}, ${lang.toUpperCase()}, ${colors[color].toLowerCase()}, ${sideName.toLowerCase()}`;
   img.width=1080;img.height=600;img.draggable=false;
   card.append(img);
@@ -73,7 +74,7 @@ function effectHint() {
 }
 async function init() {
   try {
-    const response=await fetch('assets/cards.json');if(!response.ok)throw Error('Nie udało się wczytać wizytówek.');
+    const response=await fetch(`assets/cards.json?v=${cardVersion}`);if(!response.ok)throw Error('Nie udało się wczytać wizytówek.');
     people=await response.json();
     byId('people').replaceChildren(...people.map(p=>{
       const button=document.createElement('button');button.type='button';button.className='person';button.dataset.person=p.id;

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "krzysztof-bara",
+    "name": "Krzysztof Bara",
+    "roles": {
+      "pl": "PREZES ZARZĄDU",
+      "en": "PRESIDENT OF THE BOARD"
+    }
+  },
+  {
+    "id": "radoslaw-narwojsz",
+    "name": "Radosław Narwojsz",
+    "roles": {
+      "pl": "V-CE PREZES ZARZĄDU",
+      "en": "CEO"
+    }
+  },
+  {
+    "id": "anna-galor",
+    "name": "Anna Galor",
+    "roles": {
+      "pl": "DYREKTOR HANDLOWY",
+      "en": "SALES DIRECTOR"
+    }
+  },
+  {
+    "id": "adam-garbowski",
+    "name": "Adam Garbowski",
+    "roles": {
+      "pl": "DZIAŁ HANDLOWY",
+      "en": "SALES DEPARTMENT"
+    }
+  }
+]

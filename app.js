@@ -1,5 +1,5 @@
 'use strict';
-const cardVersion = '20261001-ceo';
+const cardVersion = '20261001-pl-roles';
 const colors = {krem:'Krem',granat:'Granat',biel:'Biel'};
 const colorClasses = {krem:'cream',granat:'navy',biel:'white'};
 const byId = id => document.getElementById(id);
